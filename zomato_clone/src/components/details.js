@@ -49,7 +49,7 @@ class Details extends React.Component {
         const qs = queryString.parse(this.props.location.search);
         const { restaurant } = qs;
         axios({
-            url: `http://localhost:2020/restaurant/${restaurant}`,
+            url: `https://expressbasiccode.onrender.com/restaurant/${restaurant}`,
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -62,7 +62,7 @@ class Details extends React.Component {
     handleOrder = () => {
         const { restaurantId, menuItems } = this.state;
         axios({
-            url: `http://localhost:2020/menuitems/${restaurantId}`,
+            url: `https://expressbasiccode.onrender.com/menuitems/${restaurantId}`,
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -147,7 +147,7 @@ class Details extends React.Component {
 
     getData = async (data) => {
         try {
-            const response = await fetch(`http://localhost:2020/payment`, {
+            const response = await fetch(`https://expressbasiccode.onrender.com/payment`, {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
@@ -192,7 +192,7 @@ class Details extends React.Component {
             resname:resname
         };
         axios({
-            url: 'http://localhost:2020/orders',
+            url: 'https://expressbasiccode.onrender.com/orders',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: signUpObj

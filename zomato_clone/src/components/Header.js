@@ -66,7 +66,7 @@ class Header extends React.Component {
             address:address,
         };
            axios({
-            url:'http://localhost:2020/signup',
+            url:'https://expressbasiccode.onrender.com/signup',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: signUpObj
@@ -126,7 +126,7 @@ class Header extends React.Component {
         };
         axios({
             method: 'POST',
-            url: 'http://localhost:2020/login',
+            url: 'https://expressbasiccode.onrender.com/login',
             headers: { 'Content-Type': 'application/json' },
             data: loginObj
         })

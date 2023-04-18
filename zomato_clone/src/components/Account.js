@@ -23,7 +23,7 @@ class Account extends React.Component {
         const qs = queryString.parse(this.props.location.search);
         const { email } = qs;
         axios({
-            url: `http://localhost:2020/login/${email}`,
+            url: `https://expressbasiccode.onrender.com/login/${email}`,
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -33,7 +33,7 @@ class Account extends React.Component {
             .catch()
 
         axios({
-            url: `http://localhost:2020/orders/${email}`,
+            url: `https://expressbasiccode.onrender.com/orders/${email}`,
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })

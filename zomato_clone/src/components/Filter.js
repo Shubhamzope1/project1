@@ -29,7 +29,7 @@ class Filter extends React.Component {
             location: location
         };
         axios({
-            url: 'http://localhost:2020/filter',
+            url: 'https://expressbasiccode.onrender.com/filter',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: filterobj
@@ -39,7 +39,7 @@ class Filter extends React.Component {
             })
             .catch()
             axios({
-                url: 'http://localhost:2020/locations',
+                url: 'https://expressbasiccode.onrender.com/locations',
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             })
@@ -66,7 +66,7 @@ class Filter extends React.Component {
         };
 
         axios({
-            url: 'http://localhost:2020/filter',
+            url: 'https://expressbasiccode.onrender.com/filter',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: filterObj
@@ -90,7 +90,7 @@ class Filter extends React.Component {
             sort:sort
         };
         axios({
-            url: 'http://localhost:2020/filter',
+            url: 'https://expressbasiccode.onrender.com/filter',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: filterObj
@@ -115,7 +115,7 @@ class Filter extends React.Component {
         };
 
         axios({
-            url: 'http://localhost:2020/filter',
+            url: 'https://expressbasiccode.onrender.com/filter',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: filterObj
@@ -147,7 +147,7 @@ class Filter extends React.Component {
             page
         };
         axios({
-            url: 'http://localhost:2020/filter',
+            url: 'https://expressbasiccode.onrender.com/filter',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: filterObj
@@ -171,7 +171,7 @@ class Filter extends React.Component {
             page
         };
         axios({
-            url: 'http://localhost:2020/filter',
+            url: 'https://expressbasiccode.onrender.com/filter',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: filterObj
@@ -201,7 +201,7 @@ class Filter extends React.Component {
         };
 
         axios({
-            url: 'http://localhost:2020/filter',
+            url: 'https://expressbasiccode.onrender.com/filter',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: filterObj

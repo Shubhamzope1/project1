@@ -15,7 +15,7 @@ class Home extends React.Component{
     componentDidMount(){
         sessionStorage.clear();
         axios({
-            url: 'http://localhost:2020/locations',
+            url: 'https://expressbasiccode.onrender.com/locations',
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -25,7 +25,7 @@ class Home extends React.Component{
             .catch()
 
             axios({
-                url:'http://localhost:2020/mealtype',
+                url:'https://expressbasiccode.onrender.com/mealtype',
                 method:'GET',
                 headers:{'Content-Type':'application/json'}
             })
