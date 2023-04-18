@@ -91,16 +91,14 @@ class Details extends React.Component {
         const items = [...this.state.menuItems];
         const item = items[index];
 
-        if (operationType == 'add') {
+        if (operationType === 'add') {
             item.qty += 1;
         }
         else {
             item.qty -= 1;
         }
         items[index] = item;
-        items.map((item) => {
-            total += item.qty * item.price;
-        })
+        items.map((item) => (total += item.qty * item.price))
         this.setState({ menuItems: items, subTotal: total });
         console.log(items);
     }
@@ -199,7 +197,7 @@ class Details extends React.Component {
 
         })
             .then(response => {
-                if (response.data.message == 'User ordered Sucessfully') {
+                if (response.data.message === 'User ordered Sucessfully') {
 
                     this.setState({
                         email: '',
@@ -289,8 +287,8 @@ class Details extends React.Component {
                                                             <p className="item-descp">{item.description}</p>
                                                         </span>
                                                     </div>
-                                                    <div className="col-xs-6 col-sm-6 col-md-3 col-lg-3"> <img className="card-img-center title-img" src={`../${item.image}`} />
-                                                        {item.qty == 0 ? <div><button className="btn add-button" onClick={() => this.addItems(index, 'add')}>Add</button></div> :
+                                                    <div className="col-xs-6 col-sm-6 col-md-3 col-lg-3"> <img className="card-img-center title-img" src={`../${item.image}`} alt='SORRY' />
+                                                        {item.qty === 0 ? <div><button className="btn add-button" onClick={() => this.addItems(index, 'add')}>Add</button></div> :
                                                             <div className=" add-number"><button className="btn btn-sub p-0" style={{ width: '20px', height: '29px', color: '#61b246' }} onClick={() => this.addItems(index, 'subtract')}>-</button><span style={{ backgroundColor: 'white', width: '20px', marginLeft: '3px' }}>{item.qty}</span><button className="btn btn-add p-0" style={{ width: '29px', height: '29px', border: "none", marginLeft: '5px', color: '#61b246' }} onClick={() => this.addItems(index, 'add')}>+</button></div>}
                                                     </div>
                                                 </div>
@@ -336,8 +334,7 @@ class Details extends React.Component {
                         <div className="payheading">{restaurants.name}</div>
                         <h3 className="payitem-total">SubTotal: {subTotal}</h3>
                         <div>
-                    {menuItems.length >1 ?menuItems.filter((filt )=> filt == filt.qty=== filt.qty<1).map((item, index) => {
-                        
+                    {menuItems.length >1 ?menuItems.filter((filt )=> filt === filt.qty=== (filt.qty<1)).map((item, index) => {
                         return <div key={index}>
                                             <div>
                                             <img style={{borderRadius:'50px',padding:'3px',marginLeft:'11px'}} src={`./${item.image}`} alt="Sorry" height="50px" width="50px" />

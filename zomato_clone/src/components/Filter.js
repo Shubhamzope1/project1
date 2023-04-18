@@ -324,7 +324,7 @@ class Filter extends React.Component {
                             {restaurants.length > 0 ? restaurants.map((item, index) => {
                                 return <div className="col-lg-12 col-md-6 col-sm-6 g-0 shadow " key={index} onClick={() => this.handleNavigate(item._id)}>
                                     <div className="col-lg-5 col-md-6 col-sm-6 img-box g-0 ">
-                                        <img src={`./${item.image}`} alt="No Image, Sorry for the Inconvinience" className="top-image" />
+                                        <img src={`./${item.image}`} alt="Sorry for the Inconvinience" className="top-image" />
                                     </div>
 
                                     <div className=" headdiv col-lg-7 col-md-6 col-sm-6  ">

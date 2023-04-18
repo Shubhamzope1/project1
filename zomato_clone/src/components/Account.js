@@ -94,7 +94,7 @@ class Account extends React.Component {
                                         
                                         <div>
                                            
-                                            {item.menuItems ? item.menuItems.filter((filt )=> filt == filt.qty=== filt.qty<1).map((item) => {
+                                            {item.menuItems ? item.menuItems.filter((filt )=> filt === filt.qty=== (filt.qty<1)).map((item) => {
                                                 return <div className="ord-div">
                                                     <img style={{ borderRadius: '50px', padding: '3px', marginLeft: '11px' }} src={`./${item.image}`} alt="Sorry" height="50px" width="50px" />
                                                     <span className="itemName">{item.name}</span>
@@ -105,7 +105,7 @@ class Account extends React.Component {
 
                                             }) : null}
                                             
-                                            <div className="subt">{`subTotal: ${item.subTotal}`}  <div className="btn btn-outline-danger navibtn" onClick={() => this.handleNavigate(item.restaurantId)}>Order Again</div></div>
+                                            <div className="subt"> {`subTotal: ${item.subTotal}`}  <div className="btn btn-outline-danger navibtn" onClick={() => this.handleNavigate(item.restaurantId)}>Order Again</div></div>
                                           
                                         </div>
                                     </div>
